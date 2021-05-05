@@ -1,0 +1,18 @@
+## python3 radius_summary.py
+Traceback (most recent call last):
+  File "radius_summary.py", line 30, in <module>
+    radius_summary_parsed = parse_output(platform="cisco_wlc_ssh", command="show radius summary", data=radius_summary)
+  File "/Users/h181203/Library/Python/3.8/lib/python/site-packages/ntc_templates/parse.py", line 57, in parse_output
+    cli_table.ParseCmd(data, attrs)
+  File "/Users/h181203/Library/Python/3.8/lib/python/site-packages/textfsm/clitable.py", line 282, in ParseCmd
+    self.table = self._ParseCmdItem(self.raw, template_file=template_files[0])
+  File "/Users/h181203/Library/Python/3.8/lib/python/site-packages/textfsm/clitable.py", line 315, in _ParseCmdItem
+    for record in fsm.ParseText(cmd_input):
+  File "/Users/h181203/Library/Python/3.8/lib/python/site-packages/textfsm/parser.py", line 895, in ParseText
+    self._CheckLine(line)
+  File "/Users/h181203/Library/Python/3.8/lib/python/site-packages/textfsm/parser.py", line 944, in _CheckLine
+    if self._Operations(rule, line):
+  File "/Users/h181203/Library/Python/3.8/lib/python/site-packages/textfsm/parser.py", line 1024, in _Operations
+    raise TextFSMError('State Error raised. Rule Line: %s. Input Line: %s'
+textfsm.parser.TextFSMError: State Error raised. Rule Line: 45. Input Line: Vendor Id Backward Compatibility................. DisabledCall Station Id Case............................. lowerAccounting Call Station Id Type.................. AP's Name:SSIDAuth Call Station Id Type........................ AP's Name:SSIDExtended Source Ports Support.................... EnabledAggressive Failover.............................. DisabledKeywrap.......................................... DisabledFallback Test:Test Mode.................................... PassiveProbe User Name.............................. cisco-probeInterval (in seconds)........................ 300MAC Delimiter for Authentication Messages........ hyphenMAC Delimiter for Accounting Messages............ hyphenRADIUS Authentication Framed-MTU................. 1300 BytesAuthentication ServersIdx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - state/Profile Name/RadiusRegionString---  ----  ----------------  ------  --------  ----  --------  -------  -------------------------------------------------------1  * N     10.134.3.66       1812    Enabled   2     2         Disabled  Disabled - /none2  * N     172.31.28.66      1812    Enabled   2     2         Disabled  Disabled - /noneAccounting ServersIdx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - state/Profile Name/RadiusRegionString---  ----  ----------------  ------  --------  ----  --------  -------  -------------------------------------------------------
+
