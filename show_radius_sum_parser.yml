@@ -1,0 +1,7 @@
+- name: Parse "show radius summary" command output
+  connection: network_cli
+  ansible.netcommon.cli_parse:
+    command: "show radius summary"
+    parser:
+      name: ansible.netcommon.ntc_templates
+  register: radius_summary
