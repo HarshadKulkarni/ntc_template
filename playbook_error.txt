@@ -1,0 +1,26 @@
+TASK [Parse "show radius summary" command output] *********************************************************************************************************************
+task path: /Users/h181203/Documents/git_crgl/nd_adhoc_pbs/metro_project_AireOS_radius/show_radius_sum_parser.yml:7
+Tuesday 04 May 2021  23:17:43 -0500 (0:00:00.474)       0:00:06.810 *********** 
+redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+redirecting (type: terminal) ansible.builtin.aireos to community.network.aireos
+Loading collection community.network from /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/ansible_collections/community/network
+redirecting (type: cliconf) ansible.builtin.aireos to community.network.aireos
+<xxx-wlc.gw.eu.cargill.com> attempting to start connection
+<xxx-wlc.gw.eu.cargill.com> using connection plugin ansible.netcommon.network_cli
+Found ansible-connection at path /Library/Frameworks/Python.framework/Versions/3.8/bin/ansible-connection
+<xxx-wlc.gw.eu.com> local domain socket does not exist, starting it
+<xx-wlc.gw.eu.com> control socket path is /Users/h181203/.ansible/pc/88e2864ff7
+<xx-wlc.gw.eu.com> redirecting (type: connection) ansible.builtin.network_cli to ansible.netcommon.network_cli
+<xx-wlc.gw.eu.com> Loading collection ansible.netcommon from /Users/h181203/.ansible/collections/ansible_collections/ansible/netcommon
+<xx-wlc.gw.eu.com> redirecting (type: terminal) ansible.builtin.aireos to community.network.aireos
+<xx-wlc.gw.eu.com> Loading collection community.network from /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/ansible_collections/community/network
+<xx-wlc.gw.eu.com> redirecting (type: cliconf) ansible.builtin.aireos to community.network.aireos
+<xx-wlc.gw.eu.com> local domain socket listeners started successfully
+<xx-wlc.gw.eu.com> loaded cliconf plugin ansible_collections.community.network.plugins.cliconf.aireos from path /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/ansible_collections/community/network/plugins/cliconf/aireos.py for network_os aireos
+<xx-wlc.gw.eu.com> 
+<xx-wlc.gw.eu.com> local domain socket path is /Users/h181203/.ansible/pc/88e2864ff7
+fatal: [xx-wlc.gw.eu.com]: FAILED! => {
+    "changed": false,
+    "msg": "Unhandled exception from parser 'ansible.netcommon.ntc_templates'. Error: 'aireos'"
+}
+...ignoring
