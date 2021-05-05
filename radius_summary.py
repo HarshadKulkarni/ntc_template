@@ -1,0 +1,31 @@
+from ntc_templates.parse import parse_output
+radius_summary = (
+    "Vendor Id Backward Compatibility................. Disabled"
+    "Call Station Id Case............................. lower"
+    "Accounting Call Station Id Type.................. AP's Name:SSID"
+    "Auth Call Station Id Type........................ AP's Name:SSID"
+    "Extended Source Ports Support.................... Enabled"
+    "Aggressive Failover.............................. Disabled"
+    "Keywrap.......................................... Disabled"
+    "Fallback Test:"
+    "Test Mode.................................... Passive"
+    "Probe User Name.............................. cisco-probe"
+    "Interval (in seconds)........................ 300"
+    "MAC Delimiter for Authentication Messages........ hyphen"
+    "MAC Delimiter for Accounting Messages............ hyphen"
+    "RADIUS Authentication Framed-MTU................. 1300 Bytes"
+    ""
+    "Authentication Servers"
+    ""
+    "Idx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - state/Profile Name/RadiusRegionString"
+    "---  ----  ----------------  ------  --------  ----  --------  -------  -------------------------------------------------------"
+    "1  * N     10.134.3.66       1812    Enabled   2     2         Disabled  Disabled - /none"
+    "2  * N     172.31.28.66      1812    Enabled   2     2         Disabled  Disabled - /none"
+    ""
+    "Accounting Servers"
+    ""
+    "Idx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - state/Profile Name/RadiusRegionString"
+    "---  ----  ----------------  ------  --------  ----  --------  -------  -------------------------------------------------------"
+)
+radius_summary_parsed = parse_output(platform="cisco_wlc_ssh", command="show radius summary", data=radius_summary)
+print (radius_summary_parsed)
