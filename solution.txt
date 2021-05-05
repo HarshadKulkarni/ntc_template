@@ -1,0 +1,3 @@
+  ^\s*Test Mode\s*\.+\s+${FALLBACK_TEST_MODE}\s*$$
+  ^\s*Probe User Name\s*\.+\s+${FALLBACK_TEST_USERNAME}\s*$$
+  ^\s*Interval \(in seconds\)\.+\s+${FALLBACK_TEST_INTERVAL}\s*$$
