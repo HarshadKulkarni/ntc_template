@@ -15,3 +15,13 @@ Idx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - 
 1  *       10.10.10.10      1813    Enabled   20    20        N/A       Disabled - none/none
 4  *       10.10.10.10      1813    Enabled   20    20        N/A       Disabled - /none
 5  *       10.10.10.10     1813    Enabled   20    20        N/A       Disabled - /none
+
+#More ERRORS
+
+"changed": false, "msg": "State Error raised. Rule Line: 53. Input Line: 1  *       10.47.194.9       1812    Enabled   20    20        Enabled 
+
+{"changed": false, "msg": "State Error raised. Rule Line: 53. Input Line: 1  *       10.47.133.22      1812    Enabled   20    20        Disabled
+
+{"changed": false, "msg": "State Error raised. Rule Line: 53. Input Line: 1  * NM    10.47.133.22      1812    Enabled   20    20        Disabled 
+
+{"changed": false, "msg": "State Error raised. Rule Line: 53. Input Line: 3          10.47.194.9       1812    Enabled
