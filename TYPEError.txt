@@ -1,0 +1,17 @@
+Authentication Servers
+
+Idx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - state/Profile Name/RadiusRegionString
+---  ----  ----------------  ------  --------  ----  --------  -------  -------------------------------------------------------
+1  *       10.10.10.10       1812    Enabled   20    20        Disabled  Disabled - none/none
+2  *       10.10.10.10      1812    Enabled   20    20        Disabled  Disabled - none/none
+3  *       10.10.10.10      1812    Enabled   20    20        Enabled   Disabled - none/none
+4  *       10.10.10.10      1812    Enabled   20    20        Enabled   Disabled - /none
+5  *       10.10.10.10     1812    Enabled   20    20        Enabled   Disabled - /none
+
+Accounting Servers
+
+Idx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - state/Profile Name/RadiusRegionString
+---  ----  ----------------  ------  --------  ----  --------  -------  -------------------------------------------------------
+1  *       10.10.10.10      1813    Enabled   20    20        N/A       Disabled - none/none
+4  *       10.10.10.10      1813    Enabled   20    20        N/A       Disabled - /none
+5  *       10.10.10.10     1813    Enabled   20    20        N/A       Disabled - /none
