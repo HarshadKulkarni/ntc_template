@@ -25,3 +25,5 @@ Idx  Type  Server Address    Port    State     Tout  MgmtTout  RFC3576  IPSec - 
 {"changed": false, "msg": "State Error raised. Rule Line: 53. Input Line: 1  * NM    10.47.133.22      1812    Enabled   20    20        Disabled 
 
 {"changed": false, "msg": "State Error raised. Rule Line: 53. Input Line: 3          10.47.194.9       1812    Enabled
+
+{"changed": false, "msg": "Invalid regular expression: '^\\s*(?P<INDEX>\\d+)\\s.....\\s++(?P<AUTHENTICATION_ADDR>\\S+)\\s+(?P<PORT>\\d+)\\s+(?P<STATE>\\S+)\\s+(?P<TIMEOUT>\\d+)\\s+(?P<MGMT_TIMEOUT>\\d+)\\s+(?P<RFC3576>\\S+)\\s+(?P<IPSEC_STATE>\\S+)\\s+(?P<IPSEC_PROFILE>\\S+)\\s+\\/(?P<IPSEC_REGION>\\S+)\\s*$'. Line: 50."}
