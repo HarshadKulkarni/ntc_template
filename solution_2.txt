@@ -14,7 +14,8 @@ Value Filldown AUTHENTICATION_FRAMED_MTU (\d+)
 Value Required INDEX (\d+)
 Value AUTHENTICATION_ADDR (\S+)
 Value ACCOUNTING_ADDR (\S+)
-Value TYPE (\*?\s*N?)
+Value TYPE_STAR (\*?)
+Value TYPE_N (N?)
 Value PORT (\d+)
 Value STATE (\S+)
 Value TIMEOUT (\d+)
@@ -47,7 +48,7 @@ Start
 AuthC_Servers
   ^\s*Idx\s+Type\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s+RFC3576\s+IPSec - state\/Profile Name\/RadiusRegionString\s*$$
   ^-+
-  ^\s*${INDEX}\s*${TYPE}\s+${ACCOUNTING_ADDR}\s+${PORT}\s+${STATE}\s+${TIMEOUT}\s+${MGMT_TIMEOUT}\s+${RFC3576}\s+${IPSEC_STATE}\s+\-\s+${IPSEC_PROFILE}?\/${IPSEC_REGION}$$ -> Record
+  ^\s*${INDEX}\s*${TYPE_STAR}?\s+${TYPE_N}?\s+${ACCOUNTING_ADDR}\s+${PORT}\s+${STATE}\s+${TIMEOUT}\s+${MGMT_TIMEOUT}\s+${RFC3576}\s+${IPSEC_STATE}\s+\-\s+${IPSEC_PROFILE}?\/${IPSEC_REGION}$$ -> Record
   ^\s*$$
   ^\s*Accounting Servers\s*$$ -> Acct_Servers
   ^. -> Error
@@ -55,7 +56,7 @@ AuthC_Servers
 Acct_Servers
   ^\s*Idx\s+Type\s+Server Address\s+Port\s+State\s+Tout\s+MgmtTout\s+RFC3576\s+IPSec - state\/Profile Name\/RadiusRegionString\s*$$
   ^-+
-  ^\s*${INDEX}\s+${TYPE}\s+\s+${ACCOUNTING_ADDR}\s+${PORT}\s+${STATE}\s+${TIMEOUT}\s+${MGMT_TIMEOUT}\s+${RFC3576}\s+${IPSEC_STATE}\s+\-\s+${IPSEC_PROFILE}?\/${IPSEC_REGION}$$ -> Record
+  ^\s*${INDEX}\s+${TYPE_STAR}?\s+${TYPE_N}?\s+${ACCOUNTING_ADDR}\s+${PORT}\s+${STATE}\s+${TIMEOUT}\s+${MGMT_TIMEOUT}\s+${RFC3576}\s+${IPSEC_STATE}\s+\-\s+${IPSEC_PROFILE}?\/${IPSEC_REGION}$$ -> Record
   ^\s*Authentication Servers\s*$$ -> AuthC_Servers
   ^\s*$$
   ^. -> Error
