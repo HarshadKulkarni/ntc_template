@@ -1,0 +1,38 @@
+- name: Parse "show interfaces switchport" command output
+  ansible.utils.cli_parse:
+    command: "show interfaces switchport"
+    parser:
+      name: ansible.netcommon.ntc_templates
+  register: show_interfaces_switchport_1
+
+- name: Save parsed file
+  ansible.builtin.copy:
+    content: "show_interfaces_switchport: \n{{ show_interfaces_switchport_1.parsed | to_nice_yaml }}"
+    dest: "PARSER_BACKUP/{{ inventory_hostname }}/show_interfaces_switchport.yml"
+  delegate_to: localhost
+  
+  - name: Parse "show_ip_interface" command output
+  ansible.utils.cli_parse:
+    command: "show ip interface"
+    parser:
+      name: ansible.netcommon.ntc_templates
+  register: show_ip_interface_1
+
+- name: Save parsed file
+  ansible.builtin.copy:
+    content: "show_ip_interface: \n{{ show_ip_interface_1.parsed | to_nice_yaml }}"
+    dest: "PARSER_BACKUP/{{ inventory_hostname }}/show_ip_interface.yml"
+  delegate_to: localhost
+  
+  - name: Parse "show_version" command output
+  ansible.utils.cli_parse:
+    command: "show version"
+    parser:
+      name: ansible.netcommon.ntc_templates
+  register: show_version_1
+
+- name: Save parsed file
+  ansible.builtin.copy:
+    content: "show_version: \n{{ show_version_1.parsed | to_nice_yaml }}"
+    dest: "PARSER_BACKUP/{{ inventory_hostname }}/show_version.yml"
+  delegate_to: localhost
